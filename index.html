@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Careers | Wellfound</title>
+<meta name="description" content="Open roles at Wellfound. Remote-first, flexible hours, apply in two minutes.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+  colors: { ink:'#15171C', mist:'#F5F6F7', line:'#E3E5E8', mute:'#5C626C', accent:'#C8431D', accenthi:'#AD3716', leaf:'#76D138', leafhi:'#64B82B' }
+}}};
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  section[id], footer[id] { scroll-margin-top: 72px; }
+  :focus-visible { outline: 2px solid #C8431D; outline-offset: 2px; }
+  dialog { padding: 0; border: 0; color: #15171C; background: #fff; width: min(100% - 2rem, 560px); max-height: 92vh; border-radius: 12px; overflow: auto; }
+  dialog::backdrop { background: rgba(21,23,28,.55); }
+  dialog[open] { animation: rise .18s ease-out; }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 639px) {
+    dialog { margin: auto 0 0 0; width: 100%; max-width: 100%; border-radius: 16px 16px 0 0; }
+  }
+  #drawerPanel { transition: transform .2s ease-out; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    dialog[open] { animation: none; }
+    #drawerPanel { transition: none; }
+    header.sticky { transition: none; }
+  }
+</style>
+</head>
+<body class="bg-white font-sans text-ink antialiased">
+<a href="#roles" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-md focus:bg-white focus:px-4 focus:py-2">Skip to open roles</a>
+
+<!-- HEADER (transparent glass, hides on scroll down) -->
+<header class="sticky top-0 z-40 border-b border-ink/10 bg-white/60 text-ink backdrop-blur-md transition-transform duration-300">
+  <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5" aria-label="Main">
+    <a href="#top" class="flex items-center" aria-label="Wellfound home">
+      <img src="shikho.png" alt="Wellfound" class="h-9 w-auto" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'text-lg font-extrabold tracking-tight',textContent:'Wellfound'}))">
+    </a>
+    <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+      <a href="#roles" class="text-ink/70 hover:text-ink">Open roles</a>
+      <a href="#culture" class="text-ink/70 hover:text-ink">How we work</a>
+      <a href="#perks" class="text-ink/70 hover:text-ink">Perks</a>
+      <a href="#office" class="text-ink/70 hover:text-ink">Office</a>
+      <a href="#roles" class="rounded-md bg-leaf px-4 py-2.5 font-semibold text-ink hover:bg-leafhi active:bg-leafhi">Apply now</a>
+    </div>
+    <button id="menuBtn" class="-mr-2 grid h-11 w-11 place-items-center rounded-md hover:bg-ink/5 md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div id="drawer" class="fixed inset-0 z-50 hidden md:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+  <div id="drawerOverlay" class="absolute inset-0 bg-ink/60"></div>
+  <div id="drawerPanel" class="absolute right-0 top-0 flex h-full w-[82%] max-w-xs translate-x-full flex-col bg-ink text-white">
+    <div class="flex h-16 items-center justify-end px-5">
+      <button id="drawerClose" class="-mr-2 grid h-11 w-11 place-items-center rounded-md hover:bg-white/10" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col px-5" aria-label="Mobile">
+      <a href="#roles" class="drawer-link border-t border-white/10 py-4 text-lg font-semibold">Open roles</a>
+      <a href="#culture" class="drawer-link border-t border-white/10 py-4 text-lg font-semibold">How we work</a>
+      <a href="#perks" class="drawer-link border-t border-white/10 py-4 text-lg font-semibold">Perks</a>
+      <a href="#office" class="drawer-link border-y border-white/10 py-4 text-lg font-semibold">Office</a>
+      <a href="#roles" class="drawer-link mt-6 rounded-md bg-leaf py-3.5 text-center font-semibold text-ink hover:bg-leafhi active:bg-leafhi">Apply now</a>
+    </nav>
+  </div>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="border-b border-line">
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-24">
+    <div class="lg:col-span-7">
+      <h1 class="text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]">Build how the next generation learns, and grow while you do it.</h1>
+      <p class="mt-6 max-w-[52ch] text-lg leading-relaxed text-mute">Remote-first roles, hours you choose, and a team that ships. Browse what’s open and apply in about two minutes.</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="#roles" class="inline-flex h-12 items-center justify-center rounded-md bg-leaf px-7 font-semibold text-ink hover:bg-leafhi active:bg-leafhi">View open roles</a>
+        <a href="#culture" class="inline-flex h-12 items-center justify-center rounded-md border border-line px-7 font-semibold hover:bg-mist">See how we work</a>
+      </div>
+      <ul class="mt-10 grid max-w-xl grid-cols-2 gap-x-6 gap-y-3 border-t border-line pt-6 text-sm font-medium">
+        <li>Remote-first roles</li>
+        <li>Part-time and full-time shifts</li>
+        <li>Equity on select roles</li>
+        <li>Headquarters in Dhaka</li>
+      </ul>
+    </div>
+
+    <aside class="lg:col-span-5" aria-label="Hiring snapshot">
+      <div class="rounded-lg border border-line">
+        <div class="border-b border-line px-5 py-4">
+          <p class="font-semibold">Hiring right now</p>
+          <p class="text-sm text-mute">Updates as roles open and close.</p>
+        </div>
+        <dl class="divide-y divide-line text-sm">
+          <div class="flex items-baseline justify-between px-5 py-4"><dt class="text-mute">Open roles</dt><dd id="statOpen" class="text-2xl font-bold">–</dd></div>
+          <div class="flex items-baseline justify-between px-5 py-4"><dt class="text-mute">Fully remote</dt><dd id="statRemote" class="text-2xl font-bold">–</dd></div>
+          <div class="flex items-baseline justify-between px-5 py-4"><dt class="text-mute">Teams hiring</dt><dd id="statTeams" class="text-2xl font-bold">–</dd></div>
+          <div class="flex items-baseline justify-between px-5 py-4"><dt class="text-mute">Recently closed</dt><dd id="statClosed" class="text-2xl font-bold text-mute">–</dd></div>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- JOB BOARD -->
+<section id="roles" class="mx-auto max-w-6xl px-5 py-14 sm:py-20" aria-labelledby="rolesTitle">
+  <div class="flex flex-wrap items-end justify-between gap-3">
+    <h2 id="rolesTitle" class="text-3xl font-extrabold tracking-tight sm:text-4xl">Open roles</h2>
+    <p id="resultCount" class="text-sm text-mute" aria-live="polite"></p>
+  </div>
+
+  <div class="mt-8 grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12">
+    <div>
+      <div class="flex gap-3 lg:block">
+        <label class="sr-only" for="q">Search roles</label>
+        <input id="q" type="search" placeholder="Search roles" class="h-12 w-full flex-1 rounded-md border border-line px-4 text-base placeholder:text-mute focus-visible:outline-accent">
+        <button id="filterBtn" type="button" class="h-12 shrink-0 rounded-md border border-line px-4 font-semibold hover:bg-mist lg:hidden" aria-expanded="false" aria-controls="filterPanel">Filters<span id="filterBadge" class="ml-1 text-accent"></span></button>
+      </div>
+
+      <form id="filterPanel" class="mt-5 hidden space-y-6 lg:mt-6 lg:block" onsubmit="return false">
+        <fieldset>
+          <legend class="mb-1 text-sm font-bold">Department</legend>
+          <div id="deptFacet"></div>
+        </fieldset>
+        <fieldset>
+          <legend class="mb-1 text-sm font-bold">Location</legend>
+          <div id="locFacet"></div>
+        </fieldset>
+        <fieldset>
+          <legend class="mb-1 text-sm font-bold">Compensation</legend>
+          <label class="flex min-h-[44px] cursor-pointer items-center gap-3 text-sm"><input id="equity" type="checkbox" class="h-4 w-4 accent-[#C8431D]"> Includes equity</label>
+          <label class="flex min-h-[44px] cursor-pointer items-center gap-3 text-sm"><input id="closed" type="checkbox" class="h-4 w-4 accent-[#C8431D]" checked> Show closed roles</label>
+        </fieldset>
+        <button id="reset" type="button" class="min-h-[44px] text-sm font-semibold text-accent underline underline-offset-4">Clear filters</button>
+      </form>
+    </div>
+
+    <div>
+      <ul id="roleList" class="divide-y divide-line border-y border-line"></ul>
+      <div id="empty" class="hidden rounded-lg border border-dashed border-line px-6 py-12 text-center">
+        <p class="font-semibold">No roles match these filters.</p>
+        <p class="mt-1 text-sm text-mute">Try a different department or location.</p>
+        <button id="emptyReset" type="button" class="mt-5 h-11 rounded-md border border-line px-5 text-sm font-semibold hover:bg-mist">Clear filters</button>
+      </div>
+      <p class="mt-6 text-sm text-mute">Don’t see your role? Email <a class="font-semibold text-ink underline underline-offset-4" href="mailto:careers.wishup@gmail.com">careers.wishup@gmail.com</a> and tell us what you’d build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE: photo | principles -->
+<section id="culture" class="border-y border-line bg-mist" aria-labelledby="cultureTitle">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16">
+    <div class="aspect-[4/3] overflow-hidden rounded-lg border border-line bg-white">
+      <img src="bg3.jpg" alt="Students using phones and a laptop" class="h-full w-full object-cover object-[100%_50%]" loading="lazy" onerror="this.parentElement.style.display='none'">
+    </div>
+    <div>
+      <h2 id="cultureTitle" class="text-3xl font-extrabold tracking-tight sm:text-4xl">How we work</h2>
+      <dl class="mt-8 divide-y divide-line border-y border-line">
+        <div class="py-5"><dt class="font-bold">Ship, then improve</dt><dd class="mt-1 max-w-[56ch] text-mute">Small teams own their work end to end. You see what you built reach students.</dd></div>
+        <div class="py-5"><dt class="font-bold">Clear path forward</dt><dd class="mt-1 max-w-[56ch] text-mute">Every listing states the level, pay and what the next step looks like, before you apply.</dd></div>
+        <div class="py-5"><dt class="font-bold">Work where you do your best</dt><dd class="mt-1 max-w-[56ch] text-mute">Most roles are remote. Hybrid roles meet at our Dhaka office.</dd></div>
+        <div class="py-5"><dt class="font-bold">Hours that fit your life</dt><dd class="mt-1 max-w-[56ch] text-mute">Support shifts run 3 hours a day part-time or 6 hours a day full-time.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- PERKS: heading | table -->
+<section id="perks" class="mx-auto max-w-6xl px-5 py-14 sm:py-20" aria-labelledby="perksTitle">
+  <div class="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+    <div>
+      <h2 id="perksTitle" class="text-3xl font-extrabold tracking-tight sm:text-4xl">What you get</h2>
+      <p class="mt-4 max-w-[40ch] text-mute">The benefits are concrete, and each role page lists which ones apply.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full min-w-[420px] border-y border-line text-left text-sm">
+        <caption class="sr-only">Perks and which roles include them</caption>
+        <thead><tr class="border-b border-line text-mute"><th scope="col" class="py-3 pr-4 font-semibold">Perk</th><th scope="col" class="py-3 pr-4 font-semibold">Details</th><th scope="col" class="py-3 font-semibold">Applies to</th></tr></thead>
+        <tbody class="divide-y divide-line">
+          <tr><th scope="row" class="py-4 pr-4 font-bold">Remote work</th><td class="py-4 pr-4 text-mute">Work from anywhere with a stable connection.</td><td class="py-4">Remote roles</td></tr>
+          <tr><th scope="row" class="py-4 pr-4 font-bold">Flexible shifts</th><td class="py-4 pr-4 text-mute">Choose 3 or 6 hours daily.</td><td class="py-4">Support</td></tr>
+          <tr><th scope="row" class="py-4 pr-4 font-bold">Equity</th><td class="py-4 pr-4 text-mute">Ownership in what you help build.</td><td class="py-4">Select roles</td></tr>
+          <tr><th scope="row" class="py-4 pr-4 font-bold">Pay transparency</th><td class="py-4 pr-4 text-mute">Range or pay basis shown on every listing.</td><td class="py-4">All roles</td></tr>
+          <tr><th scope="row" class="py-4 pr-4 font-bold">Dhaka office</th><td class="py-4 pr-4 text-mute">Desk and team space at Rangs Paramount.</td><td class="py-4">Hybrid, on-site</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer id="office" class="bg-ink text-white">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
+    <div>
+      <img src="shikho.png" alt="Wellfound" class="h-9 w-auto brightness-0 invert" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'text-lg font-extrabold',textContent:'Wellfound'}))">
+      <p class="mt-4 max-w-[34ch] text-sm leading-relaxed text-white/70">Empowering the next generation through innovation, opportunity and learning.</p>
+    </div>
+    <div>
+      <h2 class="text-sm font-bold">Office</h2>
+      <address class="mt-3 text-sm not-italic leading-relaxed text-white/70">Rangs Paramount, Level 11, Block-K,<br>Plot-11, Road 17,<br>Dhaka 1213, Bangladesh</address>
+    </div>
+    <div>
+      <h2 class="text-sm font-bold">Contact</h2>
+      <a href="mailto:careers.wishup@gmail.com" class="mt-3 inline-block break-all text-sm font-semibold text-[#FF8A5F] underline underline-offset-4 hover:text-white">careers.wishup@gmail.com</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 px-5 py-6 text-center text-xs text-white/50">© 2026 Wellfound. All rights reserved.</div>
+</footer>
+
+<!-- APPLICATION DIALOG -->
+<dialog id="applyDialog" aria-labelledby="applyTitle">
+  <div class="flex items-start justify-between gap-4 border-b border-line px-6 py-5">
+    <div>
+      <h2 id="applyTitle" class="text-xl font-extrabold tracking-tight"></h2>
+      <p id="applyMeta" class="mt-1 text-sm text-mute"></p>
+    </div>
+    <button type="button" data-close class="-mr-2 -mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-md hover:bg-mist" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <form id="applyForm" class="space-y-5 px-6 py-6">
+    <input type="hidden" name="role" id="roleField">
+    <div>
+      <label for="name" class="mb-1.5 block text-sm font-semibold">Full name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required class="h-12 w-full rounded-md border border-line px-4 text-base">
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2">
+      <div>
+        <label for="email" class="mb-1.5 block text-sm font-semibold">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="h-12 w-full rounded-md border border-line px-4 text-base">
+      </div>
+      <div>
+        <label for="phone" class="mb-1.5 block text-sm font-semibold">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+880" class="h-12 w-full rounded-md border border-line px-4 text-base">
+      </div>
+    </div>
+    <div id="shiftRow" class="grid gap-5 sm:grid-cols-2">
+      <div>
+        <label for="empType" class="mb-1.5 block text-sm font-semibold">Employment type</label>
+        <select id="empType" name="employment_type" class="h-12 w-full rounded-md border border-line bg-white px-3 text-base">
+          <option>Part time</option><option>Full time</option>
+        </select>
+      </div>
+      <div>
+        <span class="mb-1.5 block text-sm font-semibold">Working hours</span>
+        <output id="hours" class="flex h-12 items-center rounded-md border border-line bg-mist px-4 font-semibold">3 hours daily</output>
+      </div>
+    </div>
+    <div>
+      <label for="cv" class="mb-1.5 block text-sm font-semibold">CV or resume <span class="font-normal text-mute">(PDF or Word, up to 5 MB)</span></label>
+      <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx" required class="block w-full text-sm text-mute file:mr-3 file:h-11 file:cursor-pointer file:rounded-md file:border-0 file:bg-ink file:px-4 file:text-sm file:font-semibold file:text-white hover:file:bg-black">
+    </div>
+    <p id="formError" class="hidden text-sm font-semibold text-red-700" role="alert"></p>
+    <button id="submitBtn" type="submit" class="h-12 w-full rounded-md bg-leaf font-semibold text-ink hover:bg-leafhi active:bg-leafhi disabled:opacity-60">Submit application</button>
+  </form>
+
+  <div id="applyDone" class="hidden px-6 py-10 text-center">
+    <div class="mx-auto grid h-12 w-12 place-items-center rounded-full bg-ink text-white">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+    </div>
+    <h3 class="mt-5 text-xl font-extrabold">Application submitted</h3>
+    <p id="doneText" class="mx-auto mt-2 max-w-[38ch] text-mute"></p>
+    <button type="button" data-close class="mt-7 h-12 rounded-md border border-line px-6 font-semibold hover:bg-mist">Back to open roles</button>
+  </div>
+</dialog>
+
+<script>
+/* ---------- DATA: edit roles here ----------
+   Real roles: Customer Support Agent, Jr. Executive.
+   Engineering, Product and Growth entries are SAMPLES (closed). Replace or delete before launch. Set open:true to reopen a role. */
+const ROLES = [
+  { id:'va', title:'Virtual Assistant (Remote)', dept:'Operations', loc:'Remote', place:'Anywhere', type:'Full-time',
+    summary:'We are looking for an organized, proactive, and communication-savvy professional to join our growing team. If you have a passion for efficiency and meet our qualifications, we want to hear from you.',
+    comp:'18,000 - 25,000', equity:false, open:true, shifts:false,
+    details:{
+      benefits:['Salary: 18,000 - 25,000 (negotiable based on experience)','Work Schedule: 5 days a week (Monday to Friday)','Weekends: Saturday and Sunday off','Hours: Standard 8-hour day shift (Remote)'],
+      reqs:['1+ year of Virtual Assistant or remote administrative support experience','Strong written and verbal English communication skills','Proficiency in Google Workspace and MS Office','Personal PC or laptop with stable, high-speed internet','A quiet, dedicated workspace','Self-motivated, detail-oriented, and able to meet deadlines independently','Strict commitment to confidentiality (NDA ready)']
+    } },
+  { id:'support', title:'Customer Support Agent', dept:'Support', loc:'Remote', place:'Anywhere', type:'Part-time or full-time',
+    summary:'This role is closed and no longer accepting applications.', comp:'Pay shared in first call', equity:false, open:false, shifts:true },
+  { id:'jr-exec', title:'Jr. Executive', dept:'Operations', loc:'Hybrid', place:'Dhaka', type:'Full-time',
+    summary:'This role is closed and no longer accepting applications.', comp:'', equity:false, open:false, shifts:false },
+  { id:'fe', title:'Frontend Engineer', dept:'Engineering', loc:'Remote', place:'Bangladesh', type:'Full-time',
+    summary:'This role is closed and no longer accepting applications.', comp:'৳80k–130k / month', equity:true, open:false, shifts:false },
+  { id:'pd', title:'Product Designer', dept:'Product', loc:'Hybrid', place:'Dhaka', type:'Full-time',
+    summary:'This role is closed and no longer accepting applications.', comp:'৳70k–110k / month', equity:true, open:false, shifts:false },
+  { id:'growth', title:'Growth Marketing Associate', dept:'Growth', loc:'On-site', place:'Dhaka', type:'Full-time',
+    summary:'This role is closed and no longer accepting applications.', comp:'৳40k–60k / month', equity:false, open:false, shifts:false }
+];
+const ENDPOINT = ''; // Set to your form handler URL to POST applications (FormData). Empty = direct redirect.
+
+const $ = s => document.querySelector(s);
+const state = { q:'', dept:'All', loc:'All', equity:false, closed:true };
+const depts = ['All', ...new Set(ROLES.map(r => r.dept))];
+const locs = ['All', 'Remote', 'Hybrid', 'On-site'];
+
+/* ---------- Facets ---------- */
+function facet(el, name, items) {
+  el.innerHTML = items.map(v => `
+    <label class="flex min-h-[44px] cursor-pointer items-center justify-between gap-3 text-sm">
+      <span class="flex items-center gap-3"><input type="radio" name="${name}" value="${v}" class="h-4 w-4 accent-[#C8431D]" ${v==='All'?'checked':''}>${v==='All'?'All':v}</span>
+      <span class="text-mute" data-count="${name}:${v}"></span>
+    </label>`).join('');
+  el.addEventListener('change', e => { state[name] = e.target.value; update(); });
+}
+facet($('#deptFacet'), 'dept', depts);
+facet($('#locFacet'), 'loc', locs);
+
+/* ---------- Filtering + render ---------- */
+function matches(r, skip) {
+  if (!state.closed && !r.open) return false;
+  if (state.equity && !r.equity) return false;
+  if (skip !== 'dept' && state.dept !== 'All' && r.dept !== state.dept) return false;
+  if (skip !== 'loc' && state.loc !== 'All' && r.loc !== state.loc) return false;
+  const q = state.q.trim().toLowerCase();
+  return !q || (r.title + ' ' + r.dept + ' ' + r.summary + ' ' + r.place).toLowerCase().includes(q);
+}
+function rowHTML(r) {
+  const chip = t => `<span class="rounded border border-line px-2 py-0.5 text-xs font-medium text-mute">${t}</span>`;
+  const action = r.open
+    ? `<button type="button" data-apply="${r.id}" class="h-11 w-full rounded-md bg-leaf px-5 text-sm font-semibold text-ink hover:bg-leafhi active:bg-leafhi sm:w-auto" aria-label="Apply for ${r.title}">Apply</button>`
+    : `<span class="inline-flex h-11 w-full items-center justify-center rounded-md bg-mist px-5 text-sm font-semibold text-mute sm:w-auto">Closed</span>`;
+  const li = a => a.map(x => `<li>${x}</li>`).join('');
+  const details = r.details ? `<details class="mt-4 max-w-[60ch] text-sm">
+        <summary class="cursor-pointer font-semibold underline underline-offset-4">Role details</summary>
+        <div class="mt-3 space-y-4">
+          <div><h4 class="font-bold">Role Details &amp; Benefits</h4><ul class="mt-1.5 list-disc space-y-1 pl-5 text-mute">${li(r.details.benefits)}</ul></div>
+          <div><h4 class="font-bold">Key Requirements</h4><ul class="mt-1.5 list-disc space-y-1 pl-5 text-mute">${li(r.details.reqs)}</ul></div>
+        </div>
+      </details>` : '';
+  return `<li class="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:gap-8 ${r.open?'':'opacity-70'}">
+    <div>
+      <h3 class="text-lg font-bold leading-snug">${r.title}</h3>
+      <p class="mt-1 max-w-[60ch] text-sm text-mute">${r.summary}</p>
+      <div class="mt-3 flex flex-wrap gap-2">${chip(r.dept)}${chip(r.loc + ', ' + r.place)}${chip(r.type)}</div>
+      ${details}
+    </div>
+    <div class="flex items-center justify-between gap-5 sm:flex-col sm:items-end sm:gap-3">
+      <div class="text-sm sm:text-right">${r.comp ? `<p class="font-semibold">${r.comp}</p>` : ''}${r.equity ? '<p class="text-accent font-semibold">+ equity</p>' : ''}</div>
+      ${action}
+    </div>
+  </li>`;
+}
+function update() {
+  const list = ROLES.filter(r => matches(r)).sort((a, b) => b.open - a.open);
+  $('#roleList').innerHTML = list.map(rowHTML).join('');
+  $('#empty').classList.toggle('hidden', list.length > 0);
+  $('#roleList').classList.toggle('hidden', list.length === 0);
+  $('#resultCount').textContent = list.length + (list.length === 1 ? ' role' : ' roles');
+  depts.forEach(v => { const n = ROLES.filter(r => matches(r,'dept') && (v==='All' || r.dept===v)).length; $(`[data-count="dept:${v}"]`).textContent = n; });
+  locs.forEach(v => { const n = ROLES.filter(r => matches(r,'loc') && (v==='All' || r.loc===v)).length; $(`[data-count="loc:${v}"]`).textContent = n; });
+  const active = (state.dept!=='All') + (state.loc!=='All') + state.equity;
+  $('#filterBadge').textContent = active ? `(${active})` : '';
+}
+function resetFilters() {
+  Object.assign(state, { q:'', dept:'All', loc:'All', equity:false, closed:true });
+  $('#q').value = ''; $('#equity').checked = false; $('#closed').checked = true;
+  document.querySelectorAll('#filterPanel input[type=radio][value=All]').forEach(i => i.checked = true);
+  update();
+}
+$('#q').addEventListener('input', e => { state.q = e.target.value; update(); });
+$('#equity').addEventListener('change', e => { state.equity = e.target.checked; update(); });
+$('#closed').addEventListener('change', e => { state.closed = e.target.checked; update(); });
+$('#reset').addEventListener('click', resetFilters);
+$('#emptyReset').addEventListener('click', resetFilters);
+$('#filterBtn').addEventListener('click', e => {
+  const open = $('#filterPanel').classList.toggle('hidden') === false;
+  e.currentTarget.setAttribute('aria-expanded', open);
+});
+
+/* ---------- Hero snapshot (computed from ROLES) ---------- */
+const openRoles = ROLES.filter(r => r.open);
+$('#statOpen').textContent = openRoles.length;
+$('#statRemote').textContent = openRoles.filter(r => r.loc === 'Remote').length;
+$('#statTeams').textContent = new Set(openRoles.map(r => r.dept)).size;
+$('#statClosed').textContent = ROLES.length - openRoles.length;
+
+/* ---------- Mobile drawer ---------- */
+const drawer = $('#drawer'), panel = $('#drawerPanel'), menuBtn = $('#menuBtn');
+function setDrawer(open) {
+  if (open) { drawer.classList.remove('hidden'); requestAnimationFrame(() => panel.classList.remove('translate-x-full')); $('#drawerClose').focus(); }
+  else { panel.classList.add('translate-x-full'); setTimeout(() => drawer.classList.add('hidden'), 200); menuBtn.focus(); }
+  menuBtn.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+menuBtn.addEventListener('click', () => setDrawer(true));
+$('#drawerClose').addEventListener('click', () => setDrawer(false));
+$('#drawerOverlay').addEventListener('click', () => setDrawer(false));
+document.querySelectorAll('.drawer-link').forEach(a => a.addEventListener('click', () => setDrawer(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !drawer.classList.contains('hidden')) setDrawer(false); });
+
+/* ---------- Hide nav on scroll down, show on scroll up ---------- */
+const siteHeader = document.querySelector('header');
+let lastY = window.scrollY;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (Math.abs(y - lastY) < 4) return;
+  if (y > lastY && y > 80) siteHeader.classList.add('-translate-y-full');
+  else if (y < lastY) siteHeader.classList.remove('-translate-y-full');
+  lastY = y;
+}, { passive: true });
+siteHeader.addEventListener('focusin', () => siteHeader.classList.remove('-translate-y-full'));
+
+/* ---------- Application dialog ---------- */
+const dlg = $('#applyDialog'), form = $('#applyForm'), err = $('#formError');
+$('#roleList').addEventListener('click', e => {
+  const b = e.target.closest('[data-apply]'); if (!b) return;
+  const r = ROLES.find(x => x.id === b.dataset.apply);
+  form.reset(); form.classList.remove('hidden'); $('#applyDone').classList.add('hidden'); err.classList.add('hidden');
+  $('#hours').textContent = '3 hours daily';
+  $('#applyTitle').textContent = r.title;
+  $('#applyMeta').textContent = `${r.dept}, ${r.loc} (${r.place})`;
+  $('#roleField').value = r.title;
+  $('#shiftRow').classList.toggle('hidden', !r.shifts);
+  $('#empType').disabled = !r.shifts;
+  $('#submitBtn').disabled = false; $('#submitBtn').textContent = 'Submit application';
+  dlg.showModal();
+});
+dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+$('#empType').addEventListener('change', e => { $('#hours').textContent = e.target.value === 'Part time' ? '3 hours daily' : '6 hours daily'; });
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const file = $('#cv').files[0];
+  if (file && file.size > 5 * 1024 * 1024) { 
+    err.textContent = 'That file is over 5 MB. Upload a smaller PDF or Word file.'; 
+    err.classList.remove('hidden'); 
+    return; 
+  }
+  err.classList.add('hidden');
+  
+  const btn = $('#submitBtn'); 
+  btn.disabled = true; 
+  btn.textContent = 'Submitting...';
+
+  try {
+    if (ENDPOINT) { 
+      const res = await fetch(ENDPOINT, { method: 'POST', body: new FormData(form) }); 
+      if (!res.ok) throw new Error(); 
+    }
+    
+    // Slight delay to display the loading state before redirecting to thankyou.html
+    setTimeout(() => {
+      window.location.href = 'thankyou.html';
+    }, 800);
+    
+  } catch {
+    err.textContent = 'Something went wrong and your application was not sent. Check your connection and submit again.';
+    err.classList.remove('hidden'); 
+    btn.disabled = false; 
+    btn.textContent = 'Submit application';
+  }
+});
+
+update();
+</script>
+</body>
+</html>
